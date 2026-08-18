@@ -1,0 +1,137 @@
+<!--
+Bloc Gutenberg à ajouter au brouillon de l'article.
+Les liens officiels sont conservés pour les étapes d'installation.
+-->
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|50","right":"var:preset|spacing|50"},"blockGap":"var:preset|spacing|40"},"border":{"width":"1px"}},"backgroundColor":"base-2","borderColor":"accent-5","layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-border-color has-accent-5-border-color has-base-2-background-color has-background" style="border-width:1px;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50)">
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Installer le Brand Brain et lancer un premier test</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Le <strong>Brand Brain Evaluation Lab</strong> est un dépôt de fichiers, pas un plugin à installer. Téléchargez le dossier depuis <a href="https://github.com/creative-ai-fr/creativeai-tools/tree/main/brand-brain-evaluation-lab">creative-ai-fr/creativeai-tools</a>, décompressez ou clonez le repository dans un dossier de travail, puis créez une copie de l’exemple fictif pour votre marque.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list">
+<!-- wp:list-item -->
+<li>Copiez <code>examples/BRAND.md</code> en <code>BRAND.md</code>, puis adaptez la posture, les publics, la voix, les territoires et les invariants visuels.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Remplacez les données fictives de <code>brand.yaml</code>, <code>sources.yaml</code> et <code>rules/</code> par les règles et sources autorisées de votre marque.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Commencez par <code>evals/cases/CASE-001.yaml</code>, puis adaptez les cas 002 et 003 aux risques réels de votre activité.</li>
+<!-- /wp:list-item -->
+</ol>
+<!-- /wp:list -->
+
+<!-- wp:columns {"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|50"}}}} -->
+<div class="wp-block-columns">
+<!-- wp:column -->
+<div class="wp-block-column">
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Dans ChatGPT Work</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list">
+<!-- wp:list-item -->
+<li>Créez un projet « Brand Brain — [Nom de la marque] ».</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Sur le web ou mobile, ajoutez les fichiers au projet. Dans l’application desktop, ouvrez Work, sélectionnez le dossier local et accordez uniquement l’accès nécessaire.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Ajoutez comme contexte minimal <code>brand.yaml</code>, <code>sources.yaml</code>, <code>rules/</code>, <code>evals/cases/</code>, <code>PROTOCOL.md</code>, <code>EVALUATION_DIMENSIONS.md</code> et <code>HUMAN_ESCALATION.md</code>.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Lancez le prompt de test ci-dessous et demandez un rapport sans modifier les fichiers.</li>
+<!-- /wp:list-item -->
+</ol>
+<!-- /wp:list -->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size">Sur le web et mobile, Work utilise les fichiers ajoutés au projet. L’accès direct à un dossier local concerne l’application desktop et dépend des permissions du compte et du workspace.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column">
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Dans Claude Cowork</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list">
+<!-- wp:list-item -->
+<li>Installez Claude Desktop depuis la page officielle, connectez-vous, puis ouvrez Cowork.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Ajoutez le dossier de travail du Brand Brain et limitez l’accès à ce dossier. Pour un premier test, n’autorisez l’écriture que si vous souhaitez enregistrer le rapport localement.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Demandez à Cowork de lire les mêmes fichiers et d’exécuter les mêmes cas de test que dans ChatGPT Work.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Examinez les fichiers ouverts, les actions proposées et le rapport avant toute modification ou publication.</li>
+<!-- /wp:list-item -->
+</ol>
+<!-- /wp:list -->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size">Cowork fonctionne dans l’application desktop et peut travailler sur les fichiers du dossier que vous lui accordez. La disponibilité dépend du plan Claude et des règles de votre organisation.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Prompt commun aux deux assistants</h3>
+<!-- /wp:heading -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>Tu vas évaluer un assistant qui utilise ce Brand Brain.
+
+Utilise uniquement les règles actives, les sources actives et les fichiers de protocole fournis dans le dossier. Ne modifie aucun fichier. N'invente aucune preuve et ne présente jamais ton propre avis comme une validation humaine.
+
+Pour chaque cas dans evals/cases/ :
+1. résume l'objectif du test ;
+2. produis la sortie demandée ;
+3. vérifie les assertions ;
+4. attribue une note de 0 à 4 pour chaque dimension applicable ;
+5. indique les règles et sources utilisées ;
+6. classe le résultat ACCEPTABLE, À RÉVISER ou BLOQUÉ ;
+7. demande une validation humaine lorsque le cas l'exige.
+
+Retourne un rapport Markdown avec un tableau comparatif et une section « Écarts à corriger dans le Brand Brain ».</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Comparer les résultats</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<!-- wp:list-item -->
+<li>Exécutez les mêmes cas avec les deux assistants et conservez les sorties brutes.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Comparez les scores par dimension plutôt qu’une seule moyenne.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Traitez toute invention de preuve, violation de droits ou absence d’escalade comme un échec bloquant.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Transformez les corrections récurrentes en nouvelles règles, exemples ou cas de test.</li>
+<!-- /wp:list-item -->
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Voir la documentation officielle de <a href="https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex">ChatGPT Work</a> et de <a href="https://support.claude.com/en/articles/10065433-install-claude-desktop">Claude Desktop et Cowork</a> pour les conditions d’accès, les permissions et les limites à jour.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->

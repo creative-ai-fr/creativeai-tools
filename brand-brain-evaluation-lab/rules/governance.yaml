@@ -1,0 +1,58 @@
+schema_version: "0.1"
+category: governance
+brand_brain: ../brand.yaml
+rules:
+  - id: RULE-GOV-001
+    type: governance
+    scope:
+      - reports
+      - public_pages
+      - presentations
+    priority: mandatory
+    status: active
+    source: GOV-001
+    rule: >-
+      Un score décrit une exécution dans un contexte donné. Il ne certifie pas
+      un modèle, une marque ou une organisation.
+    required_report_fields:
+      - test_case
+      - brand_brain_version
+      - assistant
+      - date
+      - execution_conditions
+    control: >-
+      Le rapport indique-t-il le cas, la version du Brand Brain, le modèle, la
+      date et les conditions d'exécution ?
+
+  - id: RULE-GOV-002
+    type: validation
+    scope:
+      - claims
+      - crisis
+      - rights
+      - official_publication
+    priority: mandatory
+    status: active
+    source: GOV-002
+    rule: >-
+      L'assistant peut proposer et contrôler. Il ne peut pas déclarer seul une
+      sortie approuvée.
+    escalation: review
+    control: >-
+      Une personne habilitée est-elle identifiée pour la décision finale ?
+
+  - id: RULE-GOV-003
+    type: rights
+    scope:
+      - visual
+      - campaign
+    priority: mandatory
+    status: active
+    source: GOV-002
+    rule: >-
+      Ne pas utiliser une personne, un logo, un client ou un asset dont
+      l'autorisation n'est pas documentée.
+    escalation: block
+    control: >-
+      Les autorisations et les fichiers officiels sont-ils disponibles et
+      attribués ?

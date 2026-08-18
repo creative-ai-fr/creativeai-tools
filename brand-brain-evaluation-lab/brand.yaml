@@ -1,0 +1,216 @@
+schema_version: "0.1"
+name: Lumen Commons
+id: lumen-commons
+version: 0.1.0
+status: active
+language: fr-FR
+owner: brand@lumen-commons.example
+last_verified: 2026-08-18
+effective_from: 2026-08-18
+human_reference: examples/BRAND.md
+
+posture:
+  problem: >-
+    Les équipes produisent plus vite avec l'IA, mais leurs contenus deviennent
+    génériques, leurs sources se mélangent et les responsabilités d'arbitrage
+    restent floues.
+  promise: >-
+    Aider une équipe à transformer ses décisions de marque en règles
+    consultables et testables.
+  difference: >-
+    Lumen Commons explique les décisions et leurs limites. Il ne promet ni
+    automatisation complète, ni conformité juridique automatique, ni résultat
+    business garanti.
+  legitimate_topics:
+    - structuration de connaissances de marque
+    - évaluation d'assistants IA
+    - gouvernance éditoriale
+    - provenance des sources
+    - validation humaine
+    - formats Markdown, JSON et YAML
+  caution_topics:
+    - sécurité juridique
+    - performance commerciale
+    - santé, finance ou réglementation
+    - comparaison de modèles sans protocole équivalent
+    - affirmation de supériorité technique
+
+audiences:
+  - id: communication_lead
+    label: Responsable communication
+    situation: Doit produire une campagne cohérente avec peu de temps.
+    blocker: Les règles sont dispersées.
+    knowledge_level: intermediate
+  - id: founder
+    label: Fondateur ou fondatrice
+    situation: Veut savoir si l'IA dilue sa marque.
+    blocker: Ne sait pas quoi mesurer.
+    knowledge_level: beginner-intermediate
+  - id: product_lead
+    label: Responsable produit
+    situation: Doit documenter une fonctionnalité IA.
+    blocker: Les affirmations sont difficiles à prouver.
+    knowledge_level: intermediate
+  - id: open_source_contributor
+    label: Contributeur open source
+    situation: Veut réutiliser les règles dans son propre outil.
+    blocker: Un format propriétaire bloque l'usage.
+    knowledge_level: advanced
+
+voice:
+  identity: >-
+    Un praticien calme qui rend les décisions plus faciles à examiner.
+  qualities:
+    - précis
+    - pédagogique
+    - concret
+    - nuancé
+    - ouvert aux contributions
+  forbidden_terms:
+    - révolutionnaire
+    - garanti
+    - zéro risque
+    - parfaitement fiable
+    - remplace l'humain
+    - la meilleure solution
+    - conforme par défaut
+  rules:
+    - id: RULE-VOICE-001
+      type: editorial
+      scope:
+        - articles
+        - posts
+        - documentation
+      priority: mandatory
+      status: active
+      source: DEC-001
+      rule: Présenter le problème ou la décision avant la promesse.
+      validated_examples:
+        - >-
+          Une note élevée peut masquer une invention de preuve. Le score doit
+          donc être accompagné de contrôles bloquants.
+      counterexamples:
+        - >-
+          La méthode ultime pour rendre votre IA parfaitement fiable.
+      control: >-
+        Le lecteur comprend-il le problème avant de recevoir la promesse ?
+    - id: RULE-VOICE-002
+      type: editorial
+      scope:
+        - all_channels
+      priority: mandatory
+      status: active
+      source: DEC-002
+      rule: Employer des verbes observables et éviter les garanties absolues.
+      preferred_verbs:
+        - mesurer
+        - comparer
+        - vérifier
+        - documenter
+        - signaler
+        - escalader
+      control: >-
+        La formulation décrit-elle une action ou un résultat vérifiable ?
+    - id: RULE-VOICE-003
+      type: vocabulary
+      scope:
+        - non_technical_audiences
+      priority: recommended
+      status: active
+      source: DEC-003
+      rule: Expliquer un terme technique à sa première occurrence.
+      control: >-
+        Une personne non technique peut-elle comprendre le terme sans
+        consulter un glossaire ?
+
+territories:
+  - id: make_brand_legible
+    label: Rendre la marque lisible
+    role: Expliquer les six couches du Brand Brain.
+    formats:
+      - article
+      - guide
+      - atelier
+  - id: test_assumptions
+    label: Tester plutôt que supposer
+    role: Montrer les évaluations et leurs limites.
+    formats:
+      - étude de cas
+      - tableau
+      - démonstration
+  - id: document_limits
+    label: Documenter les limites
+    role: Rendre les arbitrages visibles.
+    formats:
+      - checklist
+      - journal de décision
+  - id: open_methods
+    label: Ouvrir les méthodes
+    role: Favoriser la réutilisation par la communauté.
+    formats:
+      - dépôt Git
+      - modèle
+      - tutoriel
+
+visual:
+  background:
+    - clair
+    - graphite
+  accent: jaune-lumen
+  composition:
+    - privilégier les schémas et les tableaux
+    - utiliser une hiérarchie simple
+    - éviter les dégradés décoratifs dominants
+  restrictions:
+    - aucune image de personne réelle sans autorisation explicite
+    - aucun faux logo de client ou de partenaire
+  human_review_required_for:
+    - usage d'un visage réel
+    - usage d'un logo réel
+    - implication d'un partenariat ou d'une recommandation
+
+governance:
+  rules:
+    - id: RULE-GOV-001
+      type: governance
+      scope:
+        - reports
+        - public_pages
+        - presentations
+      priority: mandatory
+      status: active
+      source: GOV-001
+      rule: >-
+        Un score décrit une exécution dans un contexte donné. Il ne certifie pas
+        un modèle, une marque ou une organisation.
+      control: >-
+        Le rapport indique-t-il le cas, la version du Brand Brain, le modèle, la
+        date et les conditions d'exécution ?
+    - id: RULE-GOV-002
+      type: validation
+      scope:
+        - claims
+        - crisis
+        - rights
+        - official_publication
+      priority: mandatory
+      status: active
+      source: GOV-002
+      rule: >-
+        L'assistant peut proposer et contrôler. Il ne peut pas déclarer seul une
+        sortie approuvée.
+
+validation:
+  mandatory_human_review:
+    - changement de positionnement ou de promesse
+    - affirmation réglementée ou difficile à prouver
+    - usage d'une personne, d'un logo ou d'un asset soumis à des droits
+    - prise de parole de crise
+    - publication d'un contenu présenté comme officiel ou validé
+    - conflit entre deux sources actives
+  allowed_decisions:
+    - auto_ok
+    - review
+    - block
+
+source_registry: sources.yaml

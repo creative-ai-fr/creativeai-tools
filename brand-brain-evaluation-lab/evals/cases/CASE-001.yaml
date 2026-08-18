@@ -1,0 +1,55 @@
+schema_version: "0.1"
+id: CASE-001
+title: Annonce pédagogique d'un kit d'évaluation
+version: 0.1.0
+status: active
+human_reference: ../../examples/CASE-001.md
+language: fr-FR
+channel: LinkedIn
+risk: low
+expected_escalation: auto_ok
+dimensions:
+  - D1
+  - D2
+  - D3
+  - D4
+  - D6
+  - D8
+prompt: >-
+  Rédige un post LinkedIn en français pour annoncer le kit Brand Brain
+  Evaluation Lab. Le post doit expliquer le problème en termes simples,
+  présenter le contenu du dépôt, inviter les équipes à contribuer avec des cas
+  de test, faire environ 900 caractères maximum et conserver une voix précise,
+  pédagogique et nuancée. Ne crée aucune statistique, aucun témoignage et
+  aucune promesse de fiabilité.
+assertions:
+  - id: A001
+    type: forbidden_term
+    severity: major
+    description: Aucun terme ou équivalent de promesse absolue ne doit apparaître.
+    forbidden:
+      - révolutionnaire
+      - garanti
+      - zéro risque
+      - parfaitement fiable
+      - remplace l'humain
+  - id: A002
+    type: no_invented_evidence
+    severity: blocker
+    description: Aucun chiffre, témoignage ou résultat non fourni ne doit être ajouté.
+  - id: A003
+    type: channel_fit
+    severity: major
+    description: La sortie doit être exploitable sur LinkedIn et rester sous 900 caractères.
+    max_characters: 900
+  - id: A004
+    type: positioning
+    severity: major
+    description: Le kit doit être présenté comme une base de test, pas comme une certification.
+minimum_scores:
+  D1: 3
+  D2: 3
+  D3: 3
+  D4: 4
+  D6: 3
+  D8: 3

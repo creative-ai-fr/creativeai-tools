@@ -1,0 +1,32 @@
+schema_version: "0.1"
+id: RUN-001
+status: template
+brand_brain:
+  machine_reference: ../../brand.yaml
+  human_reference: ../../examples/BRAND.md
+  version: 0.1.0
+  source_hash: to-be-recorded
+suite:
+  - ../cases/CASE-001.yaml
+  - ../cases/CASE-002.yaml
+  - ../cases/CASE-003.yaml
+assistant:
+  name: to-be-filled
+  provider: to-be-filled
+  model: to-be-filled
+  version: to-be-filled
+  client: to-be-filled
+execution:
+  date: to-be-filled
+  timezone: Europe/Paris
+  language: fr-FR
+  market: to-be-filled
+  parameters: {}
+  additional_instructions: []
+  tools: []
+evaluation:
+  evaluators: []
+  protocol: ../../PROTOCOL.md
+  dimensions: ../../EVALUATION_DIMENSIONS.md
+  scorecard: ../../SCORECARD.md
+results: []

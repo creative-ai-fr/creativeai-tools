@@ -1,0 +1,71 @@
+schema_version: "0.1"
+brand_brain: brand.yaml
+sources:
+  - id: DEC-001
+    name: Charte éditoriale fictive
+    type: editorial_decision
+    owner: équipe éditoriale
+    version: "1"
+    verified_on: 2026-08-18
+    effective_from: 2026-08-18
+    status: active
+    scope:
+      - articles
+      - posts
+      - documentation
+    reference: examples/BRAND.md#rule-voice-001
+
+  - id: DEC-002
+    name: Guide des preuves fictif
+    type: evidence_policy
+    owner: équipe produit
+    version: "1"
+    verified_on: 2026-08-18
+    effective_from: 2026-08-18
+    status: active
+    scope:
+      - claims
+      - reports
+      - landing_pages
+    reference: examples/BRAND.md#rule-voice-002
+
+  - id: DEC-003
+    name: Guide de vulgarisation fictif
+    type: language_decision
+    owner: équipe contenu
+    version: "1"
+    verified_on: 2026-08-18
+    effective_from: 2026-08-18
+    status: active
+    scope:
+      - non_technical_audiences
+    reference: examples/BRAND.md#rule-voice-003
+
+  - id: GOV-001
+    name: Politique de publication fictive
+    type: governance_policy
+    owner: responsable de marque
+    version: "1"
+    verified_on: 2026-08-18
+    effective_from: 2026-08-18
+    status: active
+    scope:
+      - reports
+      - public_pages
+      - presentations
+    reference: examples/BRAND.md#rule-gov-001
+
+  - id: GOV-002
+    name: Matrice d'escalade fictive
+    type: escalation_policy
+    owner: responsable de marque
+    version: "1"
+    verified_on: 2026-08-18
+    effective_from: 2026-08-18
+    status: active
+    scope:
+      - claims
+      - crisis
+      - rights
+      - official_publication
+    reference: examples/BRAND.md#rule-gov-002

@@ -1,0 +1,61 @@
+schema_version: "0.1"
+category: editorial
+brand_brain: ../brand.yaml
+rules:
+  - id: RULE-VOICE-001
+    type: editorial
+    scope:
+      - articles
+      - posts
+      - documentation
+    priority: mandatory
+    status: active
+    source: DEC-001
+    rule: Présenter le problème ou la décision avant la promesse.
+    validated_examples:
+      - >-
+        Une note élevée peut masquer une invention de preuve. Le score doit
+        donc être accompagné de contrôles bloquants.
+    counterexamples:
+      - >-
+        La méthode ultime pour rendre votre IA parfaitement fiable.
+    control: >-
+      Le lecteur comprend-il le problème avant de recevoir la promesse ?
+
+  - id: RULE-VOICE-002
+    type: editorial
+    scope:
+      - all_channels
+    priority: mandatory
+    status: active
+    source: DEC-002
+    rule: Employer des verbes observables et éviter les garanties absolues.
+    preferred_verbs:
+      - mesurer
+      - comparer
+      - vérifier
+      - documenter
+      - signaler
+      - escalader
+    forbidden_terms:
+      - révolutionnaire
+      - garanti
+      - zéro risque
+      - parfaitement fiable
+      - remplace l'humain
+      - la meilleure solution
+      - conforme par défaut
+    control: >-
+      La formulation décrit-elle une action ou un résultat vérifiable ?
+
+  - id: RULE-VOICE-003
+    type: vocabulary
+    scope:
+      - non_technical_audiences
+    priority: recommended
+    status: active
+    source: DEC-003
+    rule: Expliquer un terme technique à sa première occurrence.
+    control: >-
+      Une personne non technique peut-elle comprendre le terme sans consulter
+      un glossaire ?
