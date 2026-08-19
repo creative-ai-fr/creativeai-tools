@@ -144,5 +144,3 @@ Pour une publication publique :
 - documentation, exemples et cas de test : CC BY 4.0 ou CC0 selon le besoin d’attribution ;
 - scripts, validateurs et adaptateurs : MIT ou Apache-2.0 ;
 - assets de marque : uniquement sous licence explicite ou avec autorisation.
-
-Les instructions de publication et le texte de release sont disponibles dans [`GITHUB_RELEASE.md`](GITHUB_RELEASE.md). Les blocs Gutenberg prêts à copier dans l’article se trouvent dans [`article/brand-brain-evaluation-lab-block.html`](article/brand-brain-evaluation-lab-block.html), [`article/installation-and-test-block.html`](article/installation-and-test-block.html) et [`article/creative-memory-sprint-cta-block.html`](article/creative-memory-sprint-cta-block.html).
