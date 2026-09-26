@@ -114,7 +114,7 @@ Les nouvelles contributions doivent éviter les données confidentielles, les as
 
 ## Licence
 
-Chaque outil précise sa propre licence dans son dossier. Le [Brand Brain Evaluation Lab](brand-brain-evaluation-lab/LICENSE.md) et le [Promptoscope ChatGPT Skill](promptoscope-chatgpt-skill/LICENSE.md) proposent une licence Creative Commons Attribution 4.0 pour leurs contenus documentaires et exemples.
+Chaque outil précise sa propre licence dans son dossier. Le [Brand Brain Evaluation Lab](brand-brain-evaluation-lab/LICENSE.md), le [Promptoscope ChatGPT Skill](promptoscope-chatgpt-skill/LICENSE.md) et les [Brand Guardian Skills](brand-guardian-skills/LICENSE.md) proposent une licence Creative Commons Attribution 4.0 pour leurs contenus documentaires et exemples.
 
 Les marques, logos, personnes, images, textes tiers et assets ajoutés par des contributeurs restent soumis à leurs propres droits.
 
