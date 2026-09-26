@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creativeai.fr/schemas/promptoscope/1.0.0.json",
+  "title": "Promptoscope image analysis result",
+  "description": "Promptoscope schema version 1.0. Write the prompt and descriptive values in English; preserve actual visible text in its original language. Use empty strings or arrays when unknown.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "language",
+    "prompt",
+    "negative_prompt",
+    "subject",
+    "setting",
+    "composition",
+    "lighting",
+    "style",
+    "color_palette",
+    "camera",
+    "details",
+    "text_detected"
+  ],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0" },
+    "language": { "type": "string", "const": "en" },
+    "prompt": { "type": "string", "minLength": 3 },
+    "negative_prompt": { "type": "string" },
+    "subject": { "type": "string" },
+    "setting": { "type": "string" },
+    "composition": { "type": "string" },
+    "lighting": { "type": "string" },
+    "style": { "type": "string" },
+    "color_palette": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "camera": { "type": "string" },
+    "details": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "text_detected": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}
