@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "language": "en",
+  "prompt": "A matte cobalt-blue ceramic vase with a rounded body and narrow neck, centered on a pale stone plinth against a softly textured warm-gray studio backdrop, photographed from a three-quarter view with generous negative space, soft directional light from the upper left, subtle glaze variations and a gentle shadow, minimal tactile product photography.",
+  "negative_prompt": "",
+  "subject": "A matte cobalt-blue ceramic vase with a rounded body and narrow neck",
+  "setting": "On a pale stone plinth against a softly textured warm-gray studio backdrop",
+  "composition": "Centered still life in a three-quarter view, with generous negative space around the vase",
+  "lighting": "Soft directional light from the upper left, with gentle falloff and a subtle shadow",
+  "style": "Minimal product photography with a tactile ceramic surface and natural tonal variation",
+  "color_palette": ["cobalt blue", "warm gray", "pale stone"],
+  "camera": "Eye-level three-quarter product view with moderate depth of field",
+  "details": ["Rounded body and narrow neck", "Subtle glaze variation across the ceramic surface"],
+  "text_detected": []
+}
