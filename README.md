@@ -24,14 +24,20 @@ Le module comprend un protocole Markdown-first, une couche YAML structurée, des
 
 ➡️ [Ouvrir le Brand Brain Evaluation Lab](brand-brain-evaluation-lab/)
 
+### Promptoscope ChatGPT Skill
+
+Un Skill conversationnel qui transforme une image jointe à ChatGPT en **recette visuelle**, **prompt de génération en anglais** et **JSON Promptoscope v1.0**. Il s’appuie sur la vision native de ChatGPT et la méthode Promptoscope ; il ne requiert ni Gemini, ni API externe, ni serveur MCP, ni backend Promptoscope.
+
+➡️ [Découvrir, installer et tester le Promptoscope ChatGPT Skill](promptoscope-chatgpt-skill/)
+
 ## Démarrage rapide
 
 ```bash
 git clone https://github.com/creative-ai-fr/creativeai-tools.git
-cd creativeai-tools/brand-brain-evaluation-lab
+cd creativeai-tools
 ```
 
-Pour commencer avec le Brand Brain d’exemple :
+Pour le Brand Brain Evaluation Lab :
 
 1. lisez [`README.md`](brand-brain-evaluation-lab/README.md) ;
 2. consultez [`brand.yaml`](brand-brain-evaluation-lab/brand.yaml) ;
@@ -39,21 +45,24 @@ Pour commencer avec le Brand Brain d’exemple :
 4. lancez le cas [`CASE-001.yaml`](brand-brain-evaluation-lab/evals/cases/CASE-001.yaml) ;
 5. utilisez les cas 002 et 003 pour tester les demandes nécessitant une escalade humaine.
 
-Le kit peut être utilisé avec un assistant capable de lire des fichiers, notamment ChatGPT Work ou Claude Cowork. Les procédures détaillées figurent dans [`installation-and-test-block.html`](brand-brain-evaluation-lab/article/installation-and-test-block.html).
+Pour Promptoscope, téléchargez l’archive Skill depuis la [dernière Release](https://github.com/creative-ai-fr/creativeai-tools/releases/latest), puis importez-la dans la gestion des Skills de ChatGPT. Les essais manuels sont décrits dans [`test-cases.md`](promptoscope-chatgpt-skill/tests/test-cases.md).
+
+Le Brand Brain peut être utilisé avec un assistant capable de lire des fichiers, notamment ChatGPT Work ou Claude Cowork. Les procédures détaillées figurent dans [`installation-and-test-block.html`](brand-brain-evaluation-lab/article/installation-and-test-block.html).
 
 ## Structure du repository
 
 ```text
 creativeai-tools/
 ├── README.md
-└── brand-brain-evaluation-lab/
+├── brand-brain-evaluation-lab/
+└── promptoscope-chatgpt-skill/
     ├── README.md
-    ├── brand.yaml
-    ├── sources.yaml
-    ├── rules/
+    ├── LICENSE.md
+    ├── CHANGELOG.md
+    ├── PRIVACY.md
+    ├── skill/promptoscope-image-to-prompt/
     ├── examples/
-    ├── evals/
-    └── article/
+    └── tests/
 ```
 
 ## Conventions
@@ -90,7 +99,7 @@ Les nouvelles contributions doivent éviter les données confidentielles, les as
 
 ## Licence
 
-Chaque outil précise sa propre licence dans son dossier. Le [Brand Brain Evaluation Lab](brand-brain-evaluation-lab/LICENSE.md) propose une licence Creative Commons Attribution 4.0 pour sa documentation, ses exemples et ses cas de test.
+Chaque outil précise sa propre licence dans son dossier. Le [Brand Brain Evaluation Lab](brand-brain-evaluation-lab/LICENSE.md) et le [Promptoscope ChatGPT Skill](promptoscope-chatgpt-skill/LICENSE.md) proposent une licence Creative Commons Attribution 4.0 pour leurs contenus documentaires et exemples.
 
 Les marques, logos, personnes, images, textes tiers et assets ajoutés par des contributeurs restent soumis à leurs propres droits.
 
@@ -103,4 +112,3 @@ Les évolutions importantes doivent mettre à jour :
 - les exemples et cas de test concernés ;
 - les versions et références croisées ;
 - les conditions de licence si le périmètre change.
-
