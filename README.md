@@ -30,6 +30,12 @@ Un Skill conversationnel qui transforme une image jointe à ChatGPT en **recette
 
 ➡️ [Découvrir, installer et tester le Promptoscope ChatGPT Skill](promptoscope-chatgpt-skill/)
 
+### Brand Guardian Skills
+
+Deux Skills composables construisent un profil de marque sourcé puis auditent un contenu à partir de ce profil. Le `brand-profile-builder` distingue règles explicites, principes inférés, patterns, exemples isolés et inconnues. Le `brand-guardian` cite les écarts confirmés, signale les conflits non résolus et propose des corrections minimales sans attribuer de score global.
+
+➡️ [Découvrir, installer et tester les Brand Guardian Skills](brand-guardian-skills/)
+
 ## Démarrage rapide
 
 ```bash
@@ -45,6 +51,8 @@ Pour le Brand Brain Evaluation Lab :
 4. lancez le cas [`CASE-001.yaml`](brand-brain-evaluation-lab/evals/cases/CASE-001.yaml) ;
 5. utilisez les cas 002 et 003 pour tester les demandes nécessitant une escalade humaine.
 
+Pour les Brand Guardian Skills, consultez [`brand-guardian-skills/README.md`](brand-guardian-skills/README.md), copiez les deux dossiers sous `brand-guardian-skills/skills/` dans le répertoire `skills/` de votre environnement, puis lancez la suite déterministe indiquée dans ce README. Les 15 scénarios comportementaux et leur replay aveugle sont documentés dans `brand-guardian-skills/tests/`.
+
 Pour Promptoscope, téléchargez l’archive Skill depuis la [dernière Release](https://github.com/creative-ai-fr/creativeai-tools/releases/latest), puis importez-la dans la gestion des Skills de ChatGPT. Les essais manuels sont décrits dans [`test-cases.md`](promptoscope-chatgpt-skill/tests/test-cases.md).
 
 Le Brand Brain peut être utilisé avec un assistant capable de lire des fichiers, notamment ChatGPT Work ou Claude Cowork. Les procédures détaillées figurent dans [`installation-and-test-block.html`](brand-brain-evaluation-lab/article/installation-and-test-block.html).
@@ -55,6 +63,13 @@ Le Brand Brain peut être utilisé avec un assistant capable de lire des fichier
 creativeai-tools/
 ├── README.md
 ├── brand-brain-evaluation-lab/
+├── brand-guardian-skills/
+│   ├── README.md
+│   ├── LICENSE.md
+│   ├── CHANGELOG.md
+│   ├── skills/
+│   ├── examples/
+│   └── tests/
 └── promptoscope-chatgpt-skill/
     ├── README.md
     ├── LICENSE.md

@@ -1,0 +1,23 @@
+name: Validate Brand Guardian Skills
+
+on:
+  push:
+    paths:
+      - "brand-guardian-skills/**"
+      - ".github/workflows/validate-brand-guardian-skills.yml"
+  pull_request:
+    paths:
+      - "brand-guardian-skills/**"
+      - ".github/workflows/validate-brand-guardian-skills.yml"
+  workflow_dispatch:
+
+jobs:
+  package-and-contract-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Run package and evaluation-contract tests
+        run: python -m unittest discover -s brand-guardian-skills/tests -p 'test_*.py' -v
