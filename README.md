@@ -36,6 +36,18 @@ Deux Skills composables construisent un profil de marque sourcé puis auditent u
 
 ➡️ [Découvrir, installer et tester les Brand Guardian Skills](brand-guardian-skills/)
 
+### Creative Director Skill
+
+Un Skill de direction créative pour analyser une idée de campagne à partir d’un brief, la challenger sur les plans stratégique, créatif et production/réception, puis proposer des pistes d’amélioration concrètes.
+
+➡️ [Lire le guide et télécharger l’archive Creative Director](creative-director-skill/) · [ZIP v0.1.0](creative-director-skill/creative-director-skill-v0.1.0.zip)
+
+### Visual Consistency Skill
+
+Un Skill qui compare plusieurs visuels, distingue les invariants des variations intentionnelles et formule des corrections ciblées pour chaque image.
+
+➡️ [Lire le guide et télécharger l’archive Visual Consistency](visual-consistency-skill/) · [ZIP v0.1.0](visual-consistency-skill/visual-consistency-skill-v0.1.0.zip)
+
 ## Démarrage rapide
 
 ```bash
@@ -55,6 +67,8 @@ Pour les Brand Guardian Skills, consultez [`brand-guardian-skills/README.md`](br
 
 Pour Promptoscope, téléchargez l’archive Skill depuis la [dernière Release](https://github.com/creative-ai-fr/creativeai-tools/releases/latest), puis importez-la dans la gestion des Skills de ChatGPT. Les essais manuels sont décrits dans [`test-cases.md`](promptoscope-chatgpt-skill/tests/test-cases.md).
 
+Pour Creative Director et Visual Consistency, téléchargez l’archive liée dans chaque dossier, décompressez-la puis copiez le dossier du Skill (`creative-director/` ou `visual-consistency/`) dans le répertoire `skills/` de votre environnement.
+
 Le Brand Brain peut être utilisé avec un assistant capable de lire des fichiers, notamment ChatGPT Work ou Claude Cowork. Les procédures détaillées figurent dans [`installation-and-test-block.html`](brand-brain-evaluation-lab/article/installation-and-test-block.html).
 
 ## Structure du repository
@@ -70,14 +84,22 @@ creativeai-tools/
 │   ├── skills/
 │   ├── examples/
 │   └── tests/
-└── promptoscope-chatgpt-skill/
+├── creative-director-skill/
+│   ├── README.md
+│   ├── creative-director-skill-v0.1.0.zip
+│   └── skill/creative-director/SKILL.md
+├── promptoscope-chatgpt-skill/
+│   ├── README.md
+│   ├── LICENSE.md
+│   ├── CHANGELOG.md
+│   ├── PRIVACY.md
+│   ├── skill/promptoscope-image-to-prompt/
+│   ├── examples/
+│   └── tests/
+└── visual-consistency-skill/
     ├── README.md
-    ├── LICENSE.md
-    ├── CHANGELOG.md
-    ├── PRIVACY.md
-    ├── skill/promptoscope-image-to-prompt/
-    ├── examples/
-    └── tests/
+    ├── visual-consistency-skill-v0.1.0.zip
+    └── skill/visual-consistency/SKILL.md
 ```
 
 ## Conventions
@@ -115,6 +137,8 @@ Les nouvelles contributions doivent éviter les données confidentielles, les as
 ## Licence
 
 Chaque outil précise sa propre licence dans son dossier. Le [Brand Brain Evaluation Lab](brand-brain-evaluation-lab/LICENSE.md), le [Promptoscope ChatGPT Skill](promptoscope-chatgpt-skill/LICENSE.md) et les [Brand Guardian Skills](brand-guardian-skills/LICENSE.md) proposent une licence Creative Commons Attribution 4.0 pour leurs contenus documentaires et exemples.
+
+Les fichiers source fournis pour [Creative Director](creative-director-skill/) et [Visual Consistency](visual-consistency-skill/) ne précisent pas de licence ; aucune licence n’est déduite par défaut.
 
 Les marques, logos, personnes, images, textes tiers et assets ajoutés par des contributeurs restent soumis à leurs propres droits.
 
