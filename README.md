@@ -67,7 +67,15 @@ Pour les Brand Guardian Skills, consultez [`brand-guardian-skills/README.md`](br
 
 Pour Promptoscope, téléchargez l’archive Skill depuis la [dernière Release](https://github.com/creative-ai-fr/creativeai-tools/releases/latest), puis importez-la dans la gestion des Skills de ChatGPT. Les essais manuels sont décrits dans [`test-cases.md`](promptoscope-chatgpt-skill/tests/test-cases.md).
 
-Pour Creative Director et Visual Consistency, téléchargez l’archive liée dans chaque dossier, décompressez-la puis copiez le dossier du Skill (`creative-director/` ou `visual-consistency/`) dans le répertoire `skills/` de votre environnement.
+Pour installer Creative Director et Visual Consistency dans Codex, téléchargez l’archive liée dans chaque dossier et décompressez-la. Copiez ensuite chaque dossier qui contient `SKILL.md` dans le répertoire des Skills de Codex : `$CODEX_HOME/skills/` (par défaut `~/.codex/skills/`). La structure doit être directement accessible ainsi :
+
+```text
+<répertoire-des-skills>/
+├── creative-director/SKILL.md
+└── visual-consistency/SKILL.md
+```
+
+Codex détectera les Skills au tour suivant.
 
 Le Brand Brain peut être utilisé avec un assistant capable de lire des fichiers, notamment ChatGPT Work ou Claude Cowork. Les procédures détaillées figurent dans [`installation-and-test-block.html`](brand-brain-evaluation-lab/article/installation-and-test-block.html).
 
