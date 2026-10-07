@@ -1,0 +1,43 @@
+{
+  "source_analysis": {
+    "schema_version": "1.0",
+    "language": "en",
+    "prompt": "Editorial product photograph of a sculptural amber perfume bottle on a pale stone plinth, soft studio light, restrained luxury palette.",
+    "negative_prompt": "warped bottle, duplicated cap, unreadable label, extra objects",
+    "subject": "A faceted amber perfume bottle with a clear cap",
+    "setting": "Minimal pale studio setting with a stone plinth",
+    "composition": "Centered product framing with generous negative space",
+    "lighting": "Soft warm key light from upper left with a restrained contact shadow",
+    "style": "Premium editorial product photography with tactile material detail",
+    "color_palette": ["amber", "cream", "sand", "charcoal"],
+    "camera": "Front-facing medium product view",
+    "details": ["faceted glass body", "clear cap", "subtle reflections"],
+    "text_detected": []
+  },
+  "camera_sidecars": [
+    {
+      "variant_schema_version": "1.0",
+      "variant_id": "A",
+      "source_analysis_id": "A-01",
+      "camera": {
+        "azimuth_deg": 0,
+        "elevation_deg": 0,
+        "distance": "medium"
+      },
+      "preserve": ["subject", "setting", "lighting", "style", "color_palette"],
+      "prompt": "Keep the same amber perfume bottle, pale stone plinth, warm studio lighting, tactile editorial style, and restrained palette. Use a source-facing medium camera view with the bottle centered and the visible geometry unchanged."
+    },
+    {
+      "variant_schema_version": "1.0",
+      "variant_id": "B",
+      "source_analysis_id": "A-01",
+      "camera": {
+        "azimuth_deg": -45,
+        "elevation_deg": 0,
+        "distance": "medium"
+      },
+      "preserve": ["subject", "setting", "lighting", "style", "color_palette"],
+      "prompt": "Keep the same amber perfume bottle, pale stone plinth, warm studio lighting, tactile editorial style, and restrained palette. Show a medium three-quarter view from the subject's left at azimuth minus 45 degrees. Infer only the newly visible side surfaces and keep the bottle scale consistent."
+    }
+  ]
+}
