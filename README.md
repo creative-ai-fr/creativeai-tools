@@ -30,6 +30,12 @@ Un Skill conversationnel qui transforme une image jointe à ChatGPT en **recette
 
 ➡️ [Découvrir, installer et tester le Promptoscope ChatGPT Skill](promptoscope-chatgpt-skill/)
 
+### Promptoscope Camera Variants Skill
+
+Un Skill séparé pour générer des variantes de point de vue à partir d’une image jointe : azimut, élévation, distance et sidecars JSON indépendants. Le JSON Promptoscope source reste inchangé ; les surfaces nouvellement visibles sont signalées comme des hypothèses.
+
+➡️ [Découvrir, installer et tester Promptoscope Camera Variants](promptoscope-camera-variants-skill/)
+
 ### Brand Guardian Skills
 
 Deux Skills composables construisent un profil de marque sourcé puis auditent un contenu à partir de ce profil. Le `brand-profile-builder` distingue règles explicites, principes inférés, patterns, exemples isolés et inconnues. Le `brand-guardian` cite les écarts confirmés, signale les conflits non résolus et propose des corrections minimales sans attribuer de score global.
@@ -66,6 +72,8 @@ Pour le Brand Brain Evaluation Lab :
 Pour les Brand Guardian Skills, consultez [`brand-guardian-skills/README.md`](brand-guardian-skills/README.md), copiez les deux dossiers sous `brand-guardian-skills/skills/` dans le répertoire `skills/` de votre environnement, puis lancez la suite déterministe indiquée dans ce README. Les 15 scénarios comportementaux et leur replay aveugle sont documentés dans `brand-guardian-skills/tests/`.
 
 Pour Promptoscope, téléchargez l’archive Skill depuis la [dernière Release](https://github.com/creative-ai-fr/creativeai-tools/releases/latest), puis importez-la dans la gestion des Skills de ChatGPT. Les essais manuels sont décrits dans [`test-cases.md`](promptoscope-chatgpt-skill/tests/test-cases.md).
+
+Pour les variantes de caméra, utilisez le dossier [Promptoscope Camera Variants Skill](promptoscope-camera-variants-skill/), ses [cas de test](promptoscope-camera-variants-skill/tests/test-cases.md) et sa procédure de [publication](promptoscope-camera-variants-skill/RELEASING.md). Il s’agit d’un Skill distinct ; le Skill `promptoscope-image-to-prompt` reste inchangé.
 
 Pour installer Creative Director et Visual Consistency dans Codex, téléchargez l’archive liée dans chaque dossier et décompressez-la. Copiez ensuite chaque dossier qui contient `SKILL.md` dans le répertoire des Skills de Codex : `$CODEX_HOME/skills/` (par défaut `~/.codex/skills/`). La structure doit être directement accessible ainsi :
 
@@ -104,6 +112,15 @@ creativeai-tools/
 │   ├── skill/promptoscope-image-to-prompt/
 │   ├── examples/
 │   └── tests/
+├── promptoscope-camera-variants-skill/
+│   ├── README.md
+│   ├── LICENSE.md
+│   ├── CHANGELOG.md
+│   ├── PRIVACY.md
+│   ├── RELEASING.md
+│   ├── examples/
+│   ├── tests/
+│   └── skill/promptoscope-camera-variants/
 └── visual-consistency-skill/
     ├── README.md
     ├── visual-consistency-skill-v0.1.0.zip
